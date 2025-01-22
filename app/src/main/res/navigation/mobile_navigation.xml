@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.androiddevelopment.ui.developer.HomeFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_home"
+
+        android:name="com.example.androiddevelopment.ui.dashboard.GalleryFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/quiz"
+        android:name="com.example.androiddevelopment.ui.slideshow.SlideshowFragment"
+        android:label="@string/quiz"
+        tools:layout="@layout/fragment_quiz" />
+    <fragment
+        android:id="@+id/moreapps"
+        android:name="com.example.androiddevelopment.fragments.quiz"
+        android:label="More Apps"
+        tools:layout="@layout/fragment_more_apps" />
+
+    <fragment
+        android:id="@+id/removeadds"
+        android:name="com.example.androiddevelopment.fragments.removeadds"
+        android:label="Remove adds"
+        tools:layout="@layout/fragment_removeadds" >
+        <action
+            android:id="@+id/action_removeadds_self"
+            app:destination="@id/removeadds" />
+    </fragment>
+</navigation>
