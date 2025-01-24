@@ -13,6 +13,9 @@
         android:theme="@style/Theme.AndroidDevelopment"
         tools:targetApi="31">
         <activity
+            android:name=".ui.Example"
+            android:exported="false" />
+        <activity
             android:name=".ui.nestedTut"
             android:exported="false" />
         <activity

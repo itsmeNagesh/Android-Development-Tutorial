@@ -47,13 +47,32 @@ public class MyObjectAdapter extends RecyclerView.Adapter<MyObjectAdapter.ViewHo
         holder.descriptionTextView.setText(myObject.getDescription());
         holder.iconImageView.setImageResource(myObject.getIconResId());
 
-        // Set onClickListener for the card
-        holder.itemView.setOnClickListener(v -> {
-//            Intent intent = new Intent(context, DetailActivity.class);
-            Intent intent = new Intent(context, nestedTut.class);
-            intent.putExtra("title", myObject.getTitle());
-//            intent.putExtra("description", myObject.getDescription());
-//            intent.putExtra("icon", myObject.getIconResId());
+        // Set onClickListener for the title
+        holder.titleTextView.setOnClickListener(v -> {
+            Intent intent;
+            switch (myObject.getTitle()) {
+                case "Tutorials": // Example title
+                    intent = new Intent(context, nestedTut.class);
+                    intent.putExtra("title", "Tutorials");
+                    break;
+
+                case "Title 2": // Example title
+                    intent = new Intent(context, DetailActivity.class);
+                    intent.putExtra("title", "Title 2");
+                    break;
+
+                case "Title 3": // Example title
+                    intent = new Intent(context, nestedTut.class);
+                    intent.putExtra("title", "Title 1");
+                    break;
+
+                default:
+                    intent = new Intent(context, nestedTut.class);
+                    intent.putExtra("title", "Title 1");
+                    break;
+            }
+
+            // Start the appropriate activity
             context.startActivity(intent);
         });
     }

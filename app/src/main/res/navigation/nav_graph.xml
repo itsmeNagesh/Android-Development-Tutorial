@@ -2,15 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/nestedTut">
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.androiddevelopment.ui.dashboard.GalleryFragment"
-        android:label="Home" />
+        android:id="@+id/nestedTut"
+        android:name="package com.example.androiddevelopment.ui.nestedTut"
+        android:label="nestedTut" />
+
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.androiddevelopment.ui.developer.HomeFragment"
+        android:name="package com.example.androiddevelopment.ui.dashboard.GalleryFragment"
         android:label="Detail" />
 </navigation>

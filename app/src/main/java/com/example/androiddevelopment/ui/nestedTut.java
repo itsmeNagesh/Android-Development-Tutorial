@@ -2,9 +2,13 @@ package com.example.androiddevelopment.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,7 +21,7 @@ import java.util.List;
 
 public class nestedTut extends AppCompatActivity {
     private RecyclerView recyclerView;
-
+    private ImageView backArrowIcon;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +34,16 @@ public class nestedTut extends AppCompatActivity {
         // Initialize the RecyclerView
         recyclerView = findViewById(R.id.recycler_viewtut);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+         // back navigation
+        backArrowIcon = findViewById(R.id.arrow_icon);
+        backArrowIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate back using the NavController
+                NavController navController = Navigation.findNavController(nestedTut.this, R.id.nav_host_fragment);
+                navController.navigateUp();
+            }
+        });
         // Retrieve the title from Intent
         String title = getIntent().getStringExtra("title");
 

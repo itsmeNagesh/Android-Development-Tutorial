@@ -51,7 +51,7 @@ public class GalleryFragment extends Fragment {
         objectList.add(new MyObject("Interview Q/A", "Contains interview questions and answers", R.drawable.factory));
         objectList.add(new MyObject("Tips & Tricks", "Improve your skills and Knowledge with Tips", R.drawable.bulb));
         objectList.add(new MyObject("Developer", "Developer Details & Message for you", R.drawable.person));
-        objectList.add(new MyObject("Remove Ads", "Upgrade Premium to Remove all Ads", R.drawable.block));
+        objectList.add(new MyObject("Remove Ads", "Upgrade Now  Premium to Remove all Ads", R.drawable.block));
 
 
         return objectList;

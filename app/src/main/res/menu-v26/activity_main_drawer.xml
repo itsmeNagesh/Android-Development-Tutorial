@@ -15,7 +15,7 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/developer"
             android:menuCategory="secondary"
-            android:iconTint="@color/blue"
+            android:iconTint="@color/yellow"
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/quiz"
